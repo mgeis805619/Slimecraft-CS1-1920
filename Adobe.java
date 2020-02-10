@@ -12,17 +12,16 @@ import java.awt.Graphics;
  *
  * @author 805619
  */
-public class Food extends Sprite{
-    private static final int WIDTH = 5;
-    private static final int HEIGHT = 7;
+public class Adobe extends Sprite {
+    private static final int WIDTH = 10;
+    private static final int HEIGHT = 15;
     
-   private static final int SPEED = 0;
-    private static final Color COLOR = Color.GREEN;
-        
-    public Food(int x, int y) {
-        super(SPEED, x, y,WIDTH, HEIGHT, COLOR);
-    }   
     
+    public Adobe(int speed, int x, int y, Color color) {
+        super(speed, x, y, WIDTH, HEIGHT, color);
+    }
+    
+    @Override
     public void draw(Graphics g) {
         g.setColor(super.getColor());
         g.fillRect(super.getY(), super.getX(), super.getWidth(), super.getHeight());
