@@ -18,4 +18,23 @@ public class Flash extends Adobe {
     public Flash(int x, int y) {
         super(SPEED, x, y, COLOR);
     } 
+    
+    public void fight(Player player) {
+        if (super.collide(player)) {
+            if (super.getStrength() >= player.getStrength()) {
+                this.didWin(player);
+                player.die();
+            } else {
+                player.didWin(this);
+                this.die();
+            }
+        }
+    }
+    public Flash reproduce(Flash mate) {
+        int newX = super.getX() + (int) (Math.random() * 100 - 50);
+        int newY = super.getY() + (int) (Math.random() * 100 - 50);
+        Flash baby = new Flash(newX, newY);
+        return baby;
+    }
+    
 }

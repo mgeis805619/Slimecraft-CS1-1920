@@ -12,13 +12,14 @@ import java.awt.Graphics;
  *
  * @author 805619
  */
-public class Food extends Sprite{
-    private static final Color COLOR = new Color(0, 144, 255);
+public class Virus extends Sprite{
+    
+    private static final Color COLOR = Color.GREEN;
     private static final int WIDTH = 5;
     private static final int HEIGHT = 5;
     private static final int SPEED = 0;
 
-    public Food (int x, int y) {
+    public Virus (int x, int y) {
         super(SPEED, x, y, WIDTH, HEIGHT, COLOR);
     }
 

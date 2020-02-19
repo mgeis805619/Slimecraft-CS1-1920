@@ -18,4 +18,12 @@ public class Player extends Adobe {
     public Player(int x, int y) {
         super(SPEED, x, y, COLOR);
     }  
+    
+    public Player reproduce(Player mate) {
+        int newX = super.getX() + (int) (Math.random() * 100 - 50);
+        int newY = super.getY() + (int) (Math.random() * 100 - 50);
+        Player baby = new Player(newX, newY);
+        return baby;
+    }
+    
 }
